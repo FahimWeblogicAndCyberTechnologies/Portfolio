@@ -1,0 +1,58 @@
+@mixin flexCentered ($direction){
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+    flex-shrink: 0;
+}
+
+@mixin primaryButton ($width, $font-size){
+    width: $width;
+    font-family: $font-primary;
+        @include flexCentered(row);
+        font-size: $font-size;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        background: linear-gradient(45deg, rgb(0, 108, 180), rgb(162, 3, 202));
+        padding: 0.7%;
+        height: 6vh;
+        cursor: pointer;
+       
+        @media only screen and (min-width: $desktop-min-width){
+            margin-left: 15%;
+            width: 12%;
+            padding: 0.7%;
+            font-size: $font-size;
+        }
+}
+
+@mixin secondaryButton ($width, $font-size){
+    @include flexCentered(row);
+    font-family: $font-primary;
+    width: $width;
+    font-size: $font-size;
+    background-color: rgba(25, 25, 51, 0.575);
+    border: 1.5px solid;
+    border-image-source: linear-gradient(45deg, rgb(0, 108, 180), rgb(162, 3, 202));
+    border-image-slice: 1;
+    font-weight: bold;
+    padding: 0.7%;
+    cursor: pointer;
+    height: calc(6vh - 3px);
+}
+
+@mixin positioning(){
+    position: relative;
+    top: 15vh;
+    height: 65vh;
+    @media only screen and (max-width: 375px){
+        //
+        max-height: 65vh;
+    }
+    @media only screen and (min-width: 1440px){
+        top: 20vh;
+        bottom: 20vh;
+        }
+}
+

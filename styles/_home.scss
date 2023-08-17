@@ -1,0 +1,162 @@
+#home{
+    @include positioning();
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    flex-shrink: 0;
+    padding-left: 10%;
+    padding-right: 10%;
+    
+    
+    @media only screen and (max-width: $mobile-max-width){
+        height: 65vh;
+        margin: 0;
+        padding-bottom: 20vh;
+    }
+
+    @media only screen and (min-width: $tablet-min-width) and (min-height: $tablet-min-height){
+        display: flex;
+    }
+    
+
+    @media only screen and (min-width: $desktop-min-width){
+        display: flex;
+        height: 65vh;
+        padding: 0;
+        margin-bottom: 30vh;
+        width: 50vw;
+        right: 20vw;
+        left: 20vw; 
+    }
+
+    @media only screen and (min-width: $large-desktop-min-width){
+        display: flex;
+        height: 55vh;
+        
+    }
+}
+
+#home-heading{
+    color: rgb(227, 226, 247);
+    font-family: $font-primary;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    text-shadow: -6px 5px 3px rgba(28,8,25,0.45);
+    padding: 1px;
+    flex-shrink: 0;
+    
+    @media only screen and (max-width: $mobile-max-width){
+        font-size: 3.4em;
+    }
+
+    @media only screen and (min-width: $tablet-min-width) and (min-height: $tablet-min-height){
+        font-size: 6em;
+    }
+
+
+
+        @media only screen and (min-width: $desktop-min-width){
+            display: flex;
+            flex-direction: row;
+            font-size: 3.4em;
+            margin: 5% 0 0 0;
+            padding: 0;
+            width: 30vw;
+        }
+
+        @media only screen and (min-width: $large-desktop-min-width){
+            font-size: 4.5em;
+        }
+}
+
+
+#home-subheading{
+    display: flex;
+    flex-direction: row;
+    font-family: $font-secondary;
+    flex-shrink: 0;
+
+    @media only screen and (max-width: $mobile-max-width){
+        font-size: 1.5em;
+        padding: 2% 0;
+    }
+
+    @media only screen and (min-width: $tablet-min-width) and (min-height: $tablet-min-height){
+        font-size: 2.5em;
+    }
+
+    @media only screen and (min-width: $desktop-min-width){
+        font-size: 1.7em;
+        padding: 1% 0;
+    }
+    @media only screen and (min-width: $large-desktop-min-width){
+        font-size: 2.5em;
+        padding-bottom: 2%;
+    }
+}
+
+
+#cta{
+    height: 10vh;
+    @include flexCentered(column);
+    flex-shrink: 0;
+    margin-top: 15%;
+    margin-bottom: 5%;
+
+    @media only screen and (min-width: $desktop-min-width){
+        margin: 0;
+        width: 70%;
+        max-width: 30vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 0;
+    }
+
+    @media only screen and (min-width: $large-desktop-min-width){
+        height: 5vh;
+        flex-direction: row;
+
+    }
+
+    #button{
+        @include primaryButton(100%, 1em);
+        margin-bottom: 3vh;
+        min-height: 5vh;
+        @media only screen and (min-width: $tablet-min-width) and (min-height: $tablet-min-height){
+            font-size: 1.8em;
+        }
+    
+        @media only screen and (min-width: $desktop-min-width){
+            margin:0;
+            font-size: 1.1em;
+            width: 50%;
+        }
+    }
+
+    #button2{
+        letter-spacing: 0.1em;
+        min-height: 5vh;
+        margin-bottom: 5vh;
+        @include secondaryButton(100%, 0.9em);
+
+        @media only screen and (min-width: $tablet-min-width) and (min-height: $tablet-min-height){
+            font-size: 1.8em;
+        }
+    
+        @media only screen and (min-width: $desktop-min-width){
+            margin:0;
+            width: 50%;
+            margin-left: 2%;
+            font-size: 1.1em;
+        }
+
+        @media only screen and (min-width: $large-desktop-min-width){
+            font-size: 1.1em;
+        }
+    }
+}

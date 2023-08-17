@@ -1,0 +1,18 @@
+html, body{
+    margin:0;
+    padding: 0;
+    height: 100vh;
+    width: auto;
+    overflow: hidden;
+    position: relative;
+    box-sizing: border-box;
+    background-image: url("../images/background.jpg");
+    color: $color-white;
+    background-position-y: -10px;
+    font-size: calc(12px + .4vw);
+    @media only screen and (min-width: $desktop-min-width){
+        background-size: 100% 120%;
+        background-position-y: -100px;
+        background-position-x: 30px;
+    }
+}

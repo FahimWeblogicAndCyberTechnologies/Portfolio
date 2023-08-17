@@ -1,0 +1,29 @@
+aside{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    top: 20vh;
+    width: 10vw;
+    min-height: 100vh;
+    z-index: 5;
+    #icons{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: flex-start;
+        img{
+            width: 5vh;
+            height: 5vh;
+            padding: 10%;
+        }
+    }
+    #arrow{
+        img{
+            height: 35vh;
+            padding: 10%;
+            align-self: center;
+        }
+        
+    }
+}

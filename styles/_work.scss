@@ -1,0 +1,180 @@
+#work{
+    @include positioning();
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    padding-bottom: 20vh;
+
+    @media only screen and (min-width: $desktop-min-width){
+        width: 80vw;
+        height: 50%;
+        position: relative;
+        margin-left: 20vw;
+        padding-bottom: 0;
+    }
+
+    #card-container{
+        height: 100%;
+        width: 100%;
+        float: right;
+        display: flex;
+        flex-direction: row;
+        flex-shrink: 0;
+        @media only screen and (min-width: $desktop-min-width){
+            width: 50%;
+            float:left;
+            height: 45vh;
+            margin-top: 20vh;
+            margin-right: 10vw;
+            margin-bottom: 0;
+        }
+        .cards{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-self: flex-end;
+            min-width: 50vw;
+            max-height: 100%;
+
+            @media only screen and (min-width: $tablet-min-width) and (min-height: $tablet-min-height){
+                font-size: 1.8em;
+                min-width: 40vw;
+            }
+
+            @media only screen and (min-width: $desktop-min-width){
+                min-width: 12vw;
+                max-width: 12vw;
+                margin: 5px;
+                font-size: 1em;
+            }
+            @media only screen and (min-width: $large-desktop-min-width){
+                height: auto;
+                font-size: 1.5em;
+            }
+        
+            .card-title{
+                font-weight: bold;
+                font-family: $font-primary;
+                padding-bottom: 4%;
+                font-size: 1.5em;
+                height: 5%;
+                width: 100%;
+                text-align: center;
+                @media only screen and (min-width: $desktop-min-width){
+                    font-size: 0.9em;
+                    height: auto;
+                }
+            }
+
+            .card-desc{
+                font-family: $font-secondary;
+                padding-bottom: 3%;
+                font-size: 1em;
+                text-align: center;
+                height: 5%;
+                width: 100%;
+                span{
+                    border: 1px solid $color-darker;
+                    background-color: rgba(11, 11, 165, 0.411);
+                    padding: 1vw 1vw 0vw 1vw;
+                    border-radius: 15px;
+                }
+                @media only screen and (min-width: $desktop-min-width){
+                    font-size: 0.7em;
+                    height: auto;
+                }
+                @media only screen and (min-width: $large-desktop-min-width){
+                    font-size: 0.7em;
+                    height: auto;
+                }
+            }
+            
+        }
+        #card-1{
+            height: 90%;
+            transform: translate(25vw);
+           background-image: url("../images/weatherapp.png");
+            background-size: 100% 100%;
+            @media only screen and (min-width: $desktop-min-width){
+                transform: none;
+                height: 100%;
+                
+            }
+        }
+
+        #card-2{
+           transform: translate(35vw);
+           height: 70%;
+           background-image: url("../images/jsgame.png");
+            background-size: 100% 100%;
+           @media only screen and (min-width: $desktop-min-width){
+        transform: none;
+           height: 100%;
+        }
+        }
+
+        #card-3{
+            background-image: url("../images/bootstrap.png");
+            background-size: 100% 100%;
+            @media only screen and (min-width: $desktop-min-width){
+                transform: none; 
+                height: 100%;
+            }
+        }
+
+        #card-4{
+            background-image: url("../images/website.png");
+            background-size: 100% 100%;
+            @media only screen and (min-width: $desktop-min-width){
+                transform: none; 
+                height: 100%;
+            }
+        }
+
+        #card-5{
+            background-image: url("../images/portfolio.png");
+            background-size: 100% 100%;
+            @media only screen and (min-width: $desktop-min-width){
+                transform: none; 
+                height: 100%;
+            }
+        }
+    }
+
+    
+    .work-buttons{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding-top: 5%;
+        @media only screen and (min-width: $desktop-min-width){
+            height: auto;
+        }
+        a{
+            height: 100%;
+            width: 100%;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            text-align: center;
+            
+        }
+        .button-git{
+            @include primaryButton(98.6%, 0.7em);
+            @media only screen and (min-width: $desktop-min-width){
+                margin-left: 0;
+                margin-bottom: 2%;
+                align-self: center;
+                width: 98.6%;
+            }
+        }
+        .button-url{
+            margin-top: 3%;
+            @include secondaryButton(calc(98.6% - 3px), 0.7em);
+            align-self: center;
+        }
+    }
+
+}

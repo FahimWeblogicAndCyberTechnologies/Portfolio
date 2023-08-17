@@ -1,0 +1,93 @@
+#navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    position: absolute;
+    bottom: 0;
+    height: 10vh;
+    padding: 5vh 0;
+    left: 5%;
+    right: 5%;
+    z-index: 5;
+    width: auto;
+    cursor: pointer;
+}
+
+#navbar.home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 0;
+    width: 10%;
+    height: 100vh;
+    padding-right: 5%;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    left: 5%;
+    right: 5%;
+}
+
+#home-btn {
+    display: flex;
+    order: 1;
+}
+
+.thumbnail {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+
+.thumbnail:active {
+    filter: brightness(150%);
+}
+
+.thumbnail img {
+    width: 10vw;
+    height: auto;
+}
+
+@media only screen and (min-width: $desktop-min-width) {
+    #navbar {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: absolute;
+        top: 0;
+        width: 10%;
+        height: 100vh;
+        padding-right: 5%;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        left: 5%;
+        right: 5%;
+    }
+c
+    #home-btn {
+        order: 1;
+    }
+
+    .thumbnail {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+    }
+
+    .thumbnail img {
+        width: 50%;
+        height: auto;
+        margin-top: 40%;
+    }
+}
